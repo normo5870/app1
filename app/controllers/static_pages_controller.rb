@@ -10,4 +10,22 @@ class StaticPagesController < ApplicationController
 
 	def Register
 	end
+
+	def AccountCreated
+	end
+
+	def Checkout
+	end
+
+	def Customer
+	end
+
+	def Product
+	end
+
+	def SiteAdmin
+	end
+
+	def VendorAdmin
+	end
 end
