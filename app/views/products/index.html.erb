@@ -1,0 +1,16 @@
+<h1>Products</h1> 
+
+<p> Find me in app/views/products/index.html.erb </p>
+
+<table>
+<tr> 
+<th> Name </th>
+<th> Price </th>
+</tr>
+<%Product.all.each do |product| %>
+<tr>
+	<td><%= product.name %></td>
+	<td><%= product.price %></td> 
+	</tr>
+	<% end %> 
+</table>
