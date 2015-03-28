@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get 'static_pages/VendorAdmin'
   get 'static_pages/VendorManager'
   get 'static_pages/Product'
-  get 'products/index'
+  get 'product/index'
+  resources :products
+  get '/product/new' => 'product#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

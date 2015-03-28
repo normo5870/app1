@@ -5,10 +5,81 @@
   <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+<style>
+#header {
+	background-color:#FF7842;
+	color:white;
+	padding:15px;
+	font-family:helvetica;
+}
+#login {
+	border: 1px solid grey;
+	padding:10px;
+	line-height:20px;
+	background-color:#4BACF5;
+	float:right;
+	color:white;
+	font-family:helvetica;
+	padding:10px;
+	text-align:left;
+}
+#nav {
+	background-color:#96FC41;
+	float:left;
+	color:black;
+	font-family:helvetica;
+	padding:10px;
+	text-align:left;
+}
+#section {
+	width:400px;
+	float:left;
+	padding:10px;
+}
+#footer {
+	background-color:#FF7842;
+	color:white;
+	padding:10px;
+	font-family:helvetica;
+	text-align:center;
+	clear:both;
+}
+</style>
+
 </head>
+<div id="header">
+<h1>ShopComm</h1>
+</div>
+
+<div id="login">
+<form action="/static_pages/Customer">
+Username: <br>
+<input type="text" name="Username"><br>
+Password: <br>
+<input type="password" name="psw"><br>
+<br>
+<input type="submit" value="Login">
+</form>
+</div>
+
+<div id="nav">
+<h3><a href="/static_pages/Home">Home</a></h3>
+<h3>Shop</h3>
+<h3>My Account</h3>
+<h3><a href="/static_pages/Register">Register</a></h3>
+<h3>About</h3>
+</div>
+
+
+
 <body>
 
 <%= yield %>
 
+
 </body>
+<div id="footer">
+Copyright © ShopComm 2015
+</div>
+
 </html>

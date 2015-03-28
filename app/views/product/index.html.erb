@@ -1,0 +1,23 @@
+<div id="section">
+<h1>Products</h1> 
+
+<p> Find me in app/views/products/index.html.erb </p>
+
+<table>
+<tr> 
+<th> Name </th>
+<th> Price </th>
+</tr>
+<% products = Product.all %>
+<% Product.all.each do |product| %>
+<tr>
+	<td><%= product.ProductName %></td>
+	<td><%= product.Price %></td> 
+	<td><%= link_to "Destroy", product, method: :delete %></td>
+</tr>
+<% end %> 
+</table>
+<%if products.size == 0 %>
+<em>No Products found</em>
+	<% end %>
+</div>
